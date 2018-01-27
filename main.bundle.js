@@ -160,7 +160,7 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3_ngx_carousel__["a" /* NgxCarouselModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes, {}),
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes, {}),
                 __WEBPACK_IMPORTED_MODULE_5_ngx_parallax__["ParallaxModule"],
                 __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_7__angular_material__["c" /* MatGridListModule */],
@@ -284,7 +284,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".navigation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 1em 2em;\n  background-color: rgba(200, 200, 200, 0.1);\n  background-image: url(\"/assets/plant_simple.png\");\n  background-repeat: no-repeat;\n  background-size: 10em;\n  background-position: left; }\n  .navigation .spacer {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto; }\n  .navigation .avatar {\n    margin: 0 2em; }\n  .navigation .title {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em;\n    font-style: italic; }\n  .navigation .links {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em; }\n    .navigation .links .link {\n      color: DimGrey; }\n  .navigation.sm {\n    font-size: 0.8em; }\n", ""]);
+exports.push([module.i, ".navigation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 1em 2em;\n  background-color: rgba(200, 200, 200, 0.1);\n  background-repeat: no-repeat;\n  background-size: 10em;\n  background-position: left; }\n  .navigation .spacer {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto; }\n  .navigation .avatar {\n    margin: 0 2em; }\n  .navigation .title {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em;\n    font-style: italic; }\n  .navigation .links {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em; }\n    .navigation .links .link {\n      color: DimGrey; }\n  .navigation.sm {\n    font-size: 0.8em; }\n", ""]);
 
 // exports
 
@@ -369,7 +369,7 @@ var NavigationComponent = (function () {
 /***/ "../../../../../src/app/components/work-card/work-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"work-card\" [ngStyle]=\"style\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t{{ link.description }}\n\t\t</mat-card-content>\n\t\t<mat-card-actions>\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
+module.exports = "<div class=\"work-card\" [ngStyle]=\"style\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
 
 /***/ }),
 
@@ -381,7 +381,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow; }\n", ""]);
+exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  margin: 0 1em; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow;\n    height: 160px; }\n    .work-card .card .content {\n      text-align: center;\n      padding: 2em 0 0.4em 0;\n      font-size: 1.6em;\n      height: 1em; }\n    .work-card .card .actions {\n      text-align: center; }\n", ""]);
 
 // exports
 
@@ -437,7 +437,7 @@ var WorkCardComponent = (function () {
 /***/ "../../../../../src/app/pages/home-page/home-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home\">\n\t<ngx-carousel class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}: {{ language.developer_value }}\n\t</div>\n</div>\n"
+module.exports = "<div class=\"home\">\n\t<ngx-carousel class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t\t<div class=\"works\">\n\t\t\t<button mat-raised-button [routerLink]=\"['/works']\">\n\t\t\t\t{{ language.my_works|textFormat:2 }}\n\t\t\t</button>\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}: {{ language.developer_value }}\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -449,7 +449,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".home .carousel {\n  margin-bottom: 1em; }\n  .home .carousel .banner {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center; }\n    .home .carousel .banner .overlay {\n      background-color: rgba(3, 3, 3, 0.4);\n      padding: 5em 0; }\n      .home .carousel .banner .overlay .title {\n        color: Snow;\n        font-size: 2em;\n        text-align: center;\n        margin-bottom: 1em; }\n      .home .carousel .banner .overlay .description {\n        color: Snow;\n        font-size: 1em;\n        text-align: center;\n        height: 1.2em; }\n  .home .carousel .left-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    left: 0;\n    cursor: pointer;\n    color: Snow; }\n  .home .carousel .right-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    right: 0;\n    cursor: pointer;\n    color: Snow; }\n\n.home .about {\n  background-repeat: no-repeat;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-position: center;\n  padding: 4em 0 6em 0; }\n  .home .about .title {\n    color: Grey;\n    text-align: center;\n    font-size: 2em;\n    margin-bottom: 1em; }\n  .home .about .description {\n    color: DimGrey;\n    text-align: center;\n    max-width: 600px;\n    margin: 0 auto;\n    padding: 0.8em; }\n    .home .about .description.strong {\n      font-weight: bold; }\n\n.home .contact {\n  background-color: SlateGrey;\n  padding: 2em 0;\n  color: Snow;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .home .contact .info {\n    padding: 0.4em 1em;\n    border-right: solid 1px LightGrey; }\n    .home .contact .info:first-child {\n      margin-left: auto; }\n    .home .contact .info:last-child {\n      margin-right: auto;\n      border-right: none; }\n\n.home .developer {\n  background-color: Ivory;\n  color: Grey;\n  font-size: 0.6em;\n  padding: 1em;\n  text-align: center; }\n", ""]);
+exports.push([module.i, ".home .carousel {\n  margin-bottom: 1em; }\n  .home .carousel .banner {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center; }\n    .home .carousel .banner .overlay {\n      background-color: rgba(3, 3, 3, 0.4);\n      padding: 5em 0; }\n      .home .carousel .banner .overlay .title {\n        color: Snow;\n        font-size: 2em;\n        text-align: center;\n        margin-bottom: 1em; }\n      .home .carousel .banner .overlay .description {\n        color: Snow;\n        font-size: 1em;\n        text-align: center;\n        height: 1.2em; }\n  .home .carousel .left-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    left: 0;\n    cursor: pointer;\n    color: Snow; }\n  .home .carousel .right-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    right: 0;\n    cursor: pointer;\n    color: Snow; }\n\n.home .about {\n  background-repeat: no-repeat;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-position: center;\n  padding: 4em 0 6em 0; }\n  .home .about .title {\n    color: Grey;\n    text-align: center;\n    font-size: 2em;\n    margin-bottom: 1em; }\n  .home .about .description {\n    color: DimGrey;\n    text-align: center;\n    max-width: 600px;\n    margin: 0 auto;\n    padding: 0.8em; }\n    .home .about .description.strong {\n      font-weight: bold; }\n  .home .about .works {\n    margin: 1em 0;\n    text-align: center;\n    color: DimGrey; }\n\n.home .contact {\n  background-color: SlateGrey;\n  padding: 2em 0;\n  color: Snow;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .home .contact .info {\n    padding: 0.4em 1em;\n    border-right: solid 1px LightGrey; }\n    .home .contact .info:first-child {\n      margin-left: auto; }\n    .home .contact .info:last-child {\n      margin-right: auto;\n      border-right: none; }\n\n.home .developer {\n  background-color: Ivory;\n  color: Grey;\n  font-size: 0.6em;\n  padding: 1em;\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -568,7 +568,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotFoundPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -580,11 +581,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var NotFoundPageComponent = (function () {
-    function NotFoundPageComponent() {
-        this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+    function NotFoundPageComponent(router) {
+        this.router = router;
+        this.language = __WEBPACK_IMPORTED_MODULE_2__resources_language__["a" /* Language */].en;
     }
     NotFoundPageComponent.prototype.ngOnInit = function () {
+        this.router.navigate(['/home']);
     };
     NotFoundPageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -592,7 +596,7 @@ var NotFoundPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
     ], NotFoundPageComponent);
     return NotFoundPageComponent;
 }());
@@ -604,7 +608,7 @@ var NotFoundPageComponent = (function () {
 /***/ "../../../../../src/app/pages/work-page/work-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  {{ title }} work-page works!\n</p>\n"
+module.exports = "<div class=\"work-page\">\n\t<div class=\"info\">\n\t\tThis page is progressively updating.<br>\n\t\tCommint Soon...\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -616,7 +620,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".work-page .info {\n  padding: 2em 1em;\n  text-align: center;\n  font-size: 2em;\n  color: Grey; }\n", ""]);
 
 // exports
 
@@ -675,7 +679,7 @@ var WorkPageComponent = (function () {
 /***/ "../../../../../src/app/pages/works-page/works-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"works\" parallax [config]=\"parallax.config\">\n\t<mat-grid-list cols=\"2\" rowHeight=\"240px\">\n\t\t<mat-grid-tile *ngFor=\"let item of links\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
+module.exports = "<div class=\"works\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
 
 /***/ }),
 
@@ -687,7 +691,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".works {\n  background-image: url(\"/assets/sketch_room.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  padding: 1em; }\n", ""]);
+exports.push([module.i, ".works {\n  background-image: url(\"/assets/sketch_room.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  padding: 4em 1em; }\n  .works .work-card {\n    width: 100%; }\n", ""]);
 
 // exports
 
@@ -704,6 +708,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorksPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -715,19 +720,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var WorksPageComponent = (function () {
-    function WorksPageComponent() {
+    function WorksPageComponent(layoutService) {
+        this.layoutService = layoutService;
+        this.drawLayout = function () {
+            var _this = this;
+            this.layoutService.dimension(function (width, height) {
+                // console.log(width, height);
+                if (width < 750) {
+                    _this.page.cols = 1;
+                    _this.page.colspan = 1;
+                }
+                else {
+                    _this.page.cols = 2;
+                    _this.page.colspan = 1;
+                }
+            });
+        };
         this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
         this.links = [{
                 description: this.language.commercial_desc,
                 url: "commercial",
                 name: this.language.commercial,
-                background: ""
+                background: "/assets/work_commercial.jpg"
             }, {
                 description: this.language.residential_desc,
                 url: "residential",
                 name: this.language.residential,
-                background: ""
+                background: "/assets/work_residential.jpg"
             }, {
                 description: this.language.hotel_desc,
                 url: "hotel",
@@ -737,7 +758,7 @@ var WorksPageComponent = (function () {
                 description: this.language.office_desc,
                 url: "office",
                 name: this.language.office,
-                background: ""
+                background: "/assets/work_office.jpg"
             }];
         this.parallax = {
             config: {
@@ -745,8 +766,13 @@ var WorksPageComponent = (function () {
                 ratio: -0.6
             }
         };
+        this.page = {
+            cols: 2,
+            colspan: 1
+        };
     }
     WorksPageComponent.prototype.ngOnInit = function () {
+        this.drawLayout();
     };
     WorksPageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -754,7 +780,7 @@ var WorksPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/works-page/works-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */]])
     ], WorksPageComponent);
     return WorksPageComponent;
 }());
@@ -913,6 +939,7 @@ var Language = (function () {
         about_me_desc_1: "I am Cathy, a freelance interior designer working and living in Singapore.",
         about_me_desc_2: "Passion for art and design drives me to go beyond limitations and I zoom in on minute details to ensure design perfection, striking precise balance on aesthetics and functionality of the overall design.",
         about_me_desc_3: "Write a message, give me a call and I'll grab a coffee and talk about your project.",
+        my_works: "my works",
         email: "email",
         email_value: "cathyhsuqian@gmail.com",
         phone: "phone",
@@ -925,8 +952,8 @@ var Language = (function () {
         office: "office",
         commercial_desc: "Shopping centers, Restaurants, Cafés, Bars",
         residential_desc: "HDB Units, Terrace House, EC, Condominiums",
-        hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gym",
-        office_desc: "Companies, Organizations, SME, Start up"
+        hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
+        office_desc: "Companies, Organizations, SMEs, Start Ups"
     };
     return Language;
 }());
