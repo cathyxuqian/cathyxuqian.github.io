@@ -372,7 +372,7 @@ var NavigationComponent = (function () {
 /***/ "../../../../../src/app/components/work-card/work-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"work-card\" [ngStyle]=\"style\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
+module.exports = "<div class=\"work-card\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
 
 /***/ }),
 
@@ -384,7 +384,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  margin: 0 1em; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow;\n    height: 160px; }\n    .work-card .card .content {\n      text-align: center;\n      padding: 2em 0 0.4em 0;\n      font-size: 1.6em;\n      height: 1em; }\n    .work-card .card .actions {\n      text-align: center; }\n", ""]);
+exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow;\n    height: 160px; }\n    .work-card .card .content {\n      text-align: center;\n      padding: 2em 0 0.4em 0;\n      font-size: 1.4em;\n      height: 1em; }\n    .work-card .card .actions {\n      text-align: center; }\n", ""]);
 
 // exports
 
@@ -400,6 +400,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkCardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -410,13 +411,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var WorkCardComponent = (function () {
-    function WorkCardComponent() {
+    function WorkCardComponent(layoutService) {
+        this.layoutService = layoutService;
+        this.drawLayout = function () {
+            var _this = this;
+            this.layoutService.dimension(function (width, height) {
+                // console.log(width, height);
+                if (width < 750) {
+                    _this.page.style["margin"] = "0";
+                }
+                else {
+                    _this.page.style["margin"] = "0 1em";
+                }
+            });
+        };
+        this.page = {
+            style: {
+                "background-image": "url()",
+                "margin": "0 1em"
+            }
+        };
     }
     WorkCardComponent.prototype.ngOnInit = function () {
-        this.style = {
-            "background-image": "url(" + this.link.background + ")"
-        };
+        this.drawLayout();
+        this.page.style["background-image"] = "url(" + this.link.background + ")";
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -428,7 +448,7 @@ var WorkCardComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/work-card/work-card.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/work-card/work-card.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_layout_service__["a" /* LayoutService */]])
     ], WorkCardComponent);
     return WorkCardComponent;
 }());
