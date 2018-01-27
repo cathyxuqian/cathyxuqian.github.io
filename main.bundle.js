@@ -127,6 +127,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [{
+        path: '',
+        component: __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+    }, {
         path: 'home',
         component: __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
@@ -588,7 +591,7 @@ var NotFoundPageComponent = (function () {
         this.language = __WEBPACK_IMPORTED_MODULE_2__resources_language__["a" /* Language */].en;
     }
     NotFoundPageComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/home']);
+        // this.router.navigate(['/home']);
     };
     NotFoundPageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
