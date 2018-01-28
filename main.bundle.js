@@ -92,14 +92,15 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pipes_background_url_pipe__ = __webpack_require__("../../../../../src/app/pipes/background-url.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_join_style_pipe__ = __webpack_require__("../../../../../src/app/pipes/join-style.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -126,21 +127,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [{
         path: '',
-        component: __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'home',
-        component: __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'works',
-        component: __WEBPACK_IMPORTED_MODULE_14__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
     }, {
         path: 'works/:id',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
     }, {
         path: '**',
-        component: __WEBPACK_IMPORTED_MODULE_17__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
     }];
 var AppModule = (function () {
     function AppModule() {
@@ -148,17 +150,17 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__pipes_text_format_pipe__["a" /* TextFormatPipe */],
                 __WEBPACK_IMPORTED_MODULE_9__pipes_background_url_pipe__["a" /* BackgroundUrlPipe */],
                 __WEBPACK_IMPORTED_MODULE_10__pipes_join_style_pipe__["a" /* JoinStylePipe */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_home_page_home_page_component__["a" /* HomePageComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__components_navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_avatar_avatar_component__["a" /* AvatarComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_work_card_work_card_component__["a" /* WorkCardComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_avatar_avatar_component__["a" /* AvatarComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_work_card_work_card_component__["a" /* WorkCardComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -171,10 +173,11 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__angular_material__["a" /* MatButtonModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_11__services_layout_service__["a" /* LayoutService */]
+                __WEBPACK_IMPORTED_MODULE_11__services_layout_service__["a" /* LayoutService */],
+                __WEBPACK_IMPORTED_MODULE_12__services_language_service__["a" /* LanguageService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */]
             ]
         })
     ], AppModule);
@@ -275,7 +278,7 @@ var AvatarComponent = (function () {
 /***/ "../../../../../src/app/components/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navigation\" [ngClass]=\"page.css\" (window:resize)=\"drawLayout()\">\n\t<app-avatar class=\"avatar\" [url]=\"owner.avatar\" [size]=\"page.avatarSize\"></app-avatar>\n\t<div class=\"title\">\n\t\t{{ owner.name|textFormat:3 }}\n\t</div>\n\t<div class=\"spacer\"></div>\n\t<div class=\"links\">\n\t\t<button mat-button class=\"link\" *ngFor=\"let item of navi\" [routerLink]=\"item.link\">\n\t\t\t{{ item.name|textFormat:1 }}\n\t\t</button>\n\t</div>\n</div>"
+module.exports = "<div class=\"navigation\" [ngClass]=\"page.css\" (window:resize)=\"drawLayout()\">\n\t<app-avatar class=\"avatar\" [url]=\"owner.avatar\" [size]=\"page.avatarSize\" [routerLink]=\"['/home']\"></app-avatar>\n\t<div class=\"title\">\n\t\t{{ owner.name|textFormat:3 }}\n\t</div>\n\t<div class=\"spacer\"></div>\n\t<div class=\"links\">\n\t\t<button mat-button class=\"link\" *ngFor=\"let item of navi\" [routerLink]=\"item.link\">\n\t\t\t{{ item.name|textFormat:1 }}\n\t\t</button>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -287,7 +290,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".navigation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 1em 2em;\n  background-color: rgba(200, 200, 200, 0.1);\n  background-repeat: no-repeat;\n  background-size: 10em;\n  background-position: left; }\n  .navigation .spacer {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto; }\n  .navigation .avatar {\n    margin: 0 2em; }\n  .navigation .title {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em;\n    font-style: italic; }\n  .navigation .links {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em; }\n    .navigation .links .link {\n      color: DimGrey; }\n  .navigation.sm {\n    font-size: 0.8em; }\n", ""]);
+exports.push([module.i, ".navigation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 1em 2em;\n  background-color: rgba(200, 200, 200, 0.1);\n  background-repeat: no-repeat;\n  background-size: 10em;\n  background-position: left; }\n  .navigation .spacer {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto; }\n  .navigation .avatar {\n    margin: 0 2em;\n    cursor: pointer;\n    outline: none; }\n  .navigation .title {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em;\n    font-style: italic; }\n  .navigation .links {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 1.2em;\n    line-height: 4em; }\n    .navigation .links .link {\n      color: DimGrey; }\n  .navigation.sm {\n    font-size: 0.8em;\n    padding: 1em 0; }\n", ""]);
 
 // exports
 
@@ -303,7 +306,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -318,8 +321,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var NavigationComponent = (function () {
-    function NavigationComponent(layoutService) {
+    function NavigationComponent(layoutService, languageService) {
         this.layoutService = layoutService;
+        this.languageService = languageService;
         this.drawLayout = function () {
             var _this = this;
             this.layoutService.dimension(function (width, height) {
@@ -334,7 +338,7 @@ var NavigationComponent = (function () {
                 }
             });
         };
-        this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+        this.language = this.languageService.loadLanguage();
         this.navi = [{
                 name: this.language.home,
                 link: "/home"
@@ -360,7 +364,7 @@ var NavigationComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/navigation/navigation.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/navigation/navigation.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */], __WEBPACK_IMPORTED_MODULE_1__services_language_service__["a" /* LanguageService */]])
     ], NavigationComponent);
     return NavigationComponent;
 }());
@@ -372,7 +376,7 @@ var NavigationComponent = (function () {
 /***/ "../../../../../src/app/components/work-card/work-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"work-card\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
+module.exports = "<div [@cardAnimation]=\"state\" class=\"work-card\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\" (mouseenter)=\"zoom('out')\" (mouseleave)=\"zoom('in')\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
 
 /***/ }),
 
@@ -400,7 +404,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkCardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -412,9 +417,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var WorkCardComponent = (function () {
     function WorkCardComponent(layoutService) {
         this.layoutService = layoutService;
+        this.state = "hide";
         this.drawLayout = function () {
             var _this = this;
             this.layoutService.dimension(function (width, height) {
@@ -427,6 +434,16 @@ var WorkCardComponent = (function () {
                 }
             });
         };
+        this.zoom = function (action) {
+            if (this.state != "hide" && this.state != "show") {
+                if (action == "in") {
+                    this.state = "small";
+                }
+                else if (action == "out") {
+                    this.state = "large";
+                }
+            }
+        };
         this.page = {
             style: {
                 "background-image": "url()",
@@ -435,20 +452,50 @@ var WorkCardComponent = (function () {
         };
     }
     WorkCardComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.drawLayout();
         this.page.style["background-image"] = "url(" + this.link.background + ")";
+        setTimeout(function () {
+            _this.state = "show";
+            setTimeout(function () {
+                _this.state = "small";
+            }, 400);
+        }, this.delay);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], WorkCardComponent.prototype, "link", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Number)
+    ], WorkCardComponent.prototype, "delay", void 0);
     WorkCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-work-card',
             template: __webpack_require__("../../../../../src/app/components/work-card/work-card.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/work-card/work-card.component.scss")]
+            styles: [__webpack_require__("../../../../../src/app/components/work-card/work-card.component.scss")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* trigger */])('cardAnimation', [
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('small', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        transform: 'scale(1)',
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('large', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        transform: 'scale(1.02)',
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('small => large', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('400ms ease')),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('large => small', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('400ms ease')),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('hide', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 0
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 1
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('hide => show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('400ms ease'))
+                ]),
+            ]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_layout_service__["a" /* LayoutService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */]])
     ], WorkCardComponent);
     return WorkCardComponent;
 }());
@@ -460,7 +507,7 @@ var WorkCardComponent = (function () {
 /***/ "../../../../../src/app/pages/home-page/home-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home\">\n\t<ngx-carousel class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t\t<div class=\"works\">\n\t\t\t<button mat-raised-button [routerLink]=\"['/works']\">\n\t\t\t\t{{ language.my_works|textFormat:2 }}\n\t\t\t</button>\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}: {{ language.developer_value }}\n\t</div>\n</div>\n"
+module.exports = "<div class=\"home\">\n\t<ngx-carousel [@aboutAnimation]=\"state\" class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div [@aboutAnimation]=\"state\" class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t\t<div class=\"works\">\n\t\t\t<button mat-raised-button [routerLink]=\"['/works']\">\n\t\t\t\t{{ language.my_works|textFormat:2 }}\n\t\t\t</button>\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}: {{ language.developer_value }}\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -488,7 +535,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -500,12 +548,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var HomePageComponent = (function () {
-    function HomePageComponent() {
+    function HomePageComponent(languageService) {
+        this.languageService = languageService;
+        this.state = "hide";
         this.carouselChange = function (event) {
             console.log("carouselChange", event);
         };
-        this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+        this.language = this.languageService.loadLanguage();
         this.banners = [{
                 link: "/assets/interior_design_1.jpg",
                 title: this.language.morden_concept,
@@ -531,6 +582,7 @@ var HomePageComponent = (function () {
         };
     }
     HomePageComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.carousel = {
             grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
             slide: 1,
@@ -544,14 +596,28 @@ var HomePageComponent = (function () {
             loop: true,
             custom: 'banner'
         };
+        setTimeout(function () {
+            _this.state = "show";
+        }, 100);
     };
     HomePageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home-page',
             template: __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/home-page/home-page.component.scss")]
+            styles: [__webpack_require__("../../../../../src/app/pages/home-page/home-page.component.scss")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* trigger */])('aboutAnimation', [
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('hide', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 0
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 1
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('hide => show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('400ms ease'))
+                ]),
+            ]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
     ], HomePageComponent);
     return HomePageComponent;
 }());
@@ -592,7 +658,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotFoundPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -606,9 +672,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var NotFoundPageComponent = (function () {
-    function NotFoundPageComponent(router) {
+    function NotFoundPageComponent(router, languageService) {
         this.router = router;
-        this.language = __WEBPACK_IMPORTED_MODULE_2__resources_language__["a" /* Language */].en;
+        this.languageService = languageService;
+        this.language = this.languageService.loadLanguage();
     }
     NotFoundPageComponent.prototype.ngOnInit = function () {
         // this.router.navigate(['/home']);
@@ -619,7 +686,7 @@ var NotFoundPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
     ], NotFoundPageComponent);
     return NotFoundPageComponent;
 }());
@@ -702,7 +769,7 @@ var WorkPageComponent = (function () {
 /***/ "../../../../../src/app/pages/works-page/works-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"works\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
+module.exports = "<div class=\"works\" [ngStyle]=\"page.style\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links; index as i;\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\" [delay]=\"i*600\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
 
 /***/ }),
 
@@ -714,7 +781,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".works {\n  background-image: url(\"/assets/sketch_room.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  padding: 4em 1em; }\n  .works .work-card {\n    width: 100%; }\n", ""]);
+exports.push([module.i, ".works {\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  padding: 40px 1em; }\n  .works .work-card {\n    width: 100%; }\n", ""]);
 
 // exports
 
@@ -730,7 +797,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorksPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -745,8 +812,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var WorksPageComponent = (function () {
-    function WorksPageComponent(layoutService) {
+    function WorksPageComponent(layoutService, languageService) {
         this.layoutService = layoutService;
+        this.languageService = languageService;
         this.drawLayout = function () {
             var _this = this;
             this.layoutService.dimension(function (width, height) {
@@ -754,14 +822,17 @@ var WorksPageComponent = (function () {
                 if (width < 750) {
                     _this.page.cols = 1;
                     _this.page.colspan = 1;
+                    _this.parallax.config.initialValue = 300;
                 }
                 else {
                     _this.page.cols = 2;
                     _this.page.colspan = 1;
+                    _this.parallax.config.initialValue = 100;
                 }
+                _this.page.style["min-height"] = height - 188 + "px";
             });
         };
-        this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+        this.language = this.languageService.loadLanguage();
         this.links = [{
                 description: this.language.commercial_desc,
                 url: "commercial",
@@ -791,7 +862,10 @@ var WorksPageComponent = (function () {
         };
         this.page = {
             cols: 2,
-            colspan: 1
+            colspan: 1,
+            style: {
+                "min-height": "initial"
+            }
         };
     }
     WorksPageComponent.prototype.ngOnInit = function () {
@@ -803,7 +877,7 @@ var WorksPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/works-page/works-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */], __WEBPACK_IMPORTED_MODULE_1__services_language_service__["a" /* LanguageService */]])
     ], WorksPageComponent);
     return WorksPageComponent;
 }());
@@ -978,7 +1052,87 @@ var Language = (function () {
         hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
         office_desc: "Companies, Organizations, SMEs, Start Ups"
     };
+    Language.ch = {
+        cathy: "cathy",
+        home: "home",
+        works: "works",
+        err_404: "404 Error",
+        desc_page_not_round: "Sorry! The page you are looking for is not exist!",
+        morden_concept: "morden concept",
+        morden_concept_desc: "I do design with all advanced and latest techniques",
+        flexible_time: "flexible time",
+        flexible_time_desc: "You are the time manager for your building",
+        cost_effecient: "cost effecient",
+        cost_effecient_desc: "Materials designs and works are transparent for you",
+        all_for_you: "all for you",
+        all_for_you_desc: "Everything I have done is provide you a fantastic interior experience",
+        about_me: "about me",
+        about_me_desc_1: "I am Cathy, a freelance interior designer working and living in Singapore.",
+        about_me_desc_2: "Passion for art and design drives me to go beyond limitations and I zoom in on minute details to ensure design perfection, striking precise balance on aesthetics and functionality of the overall design.",
+        about_me_desc_3: "Write a message, give me a call and I'll grab a coffee and talk about your project.",
+        my_works: "my works",
+        email: "email",
+        email_value: "cathyhsuqian@gmail.com",
+        phone: "phone",
+        phone_value: "+65 9822 5777",
+        developer: "developer",
+        developer_value: "YQ.B - 2018 Jan",
+        commercial: "commercial",
+        residential: "residential",
+        hotel: "hotel",
+        office: "office",
+        commercial_desc: "Shopping centers, Restaurants, Cafés, Bars",
+        residential_desc: "HDB Units, Terrace House, EC, Condominiums",
+        hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
+        office_desc: "Companies, Organizations, SMEs, Start Ups"
+    };
     return Language;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/language.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LanguageService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resources_language__ = __webpack_require__("../../../../../src/app/resources/language.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LanguageService = (function () {
+    function LanguageService() {
+        this.loadLanguage = function () {
+            var lan = localStorage.getItem("CATHY_LANGUAGE");
+            if (!lan) {
+                lan = "EN";
+                localStorage.setItem("CATHY_LANGUAGE", lan);
+            }
+            if (lan == "EN") {
+                return __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+            }
+            else if (lan == "CH") {
+                return __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].ch;
+            }
+        };
+        this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
+    }
+    LanguageService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], LanguageService);
+    return LanguageService;
 }());
 
 
