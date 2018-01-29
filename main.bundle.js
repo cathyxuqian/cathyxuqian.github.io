@@ -1090,7 +1090,7 @@ var Language = (function () {
     }
     Language.en = {
         en: "en",
-        ch: "ch",
+        ch: "中文",
         cathy: "cathy",
         home: "home",
         works: "works",
@@ -1127,7 +1127,7 @@ var Language = (function () {
         comming_desc: "This page is progressively updating."
     };
     Language.ch = {
-        en: "英文",
+        en: "en",
         ch: "中文",
         cathy: "许茜",
         home: "主页",
