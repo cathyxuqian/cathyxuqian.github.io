@@ -27,6 +27,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
+// import 'web-animations-js/web-animations.min';
+// import 'hammerjs/hammer';
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/object';
@@ -42,6 +44,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import 'core-js/es6/map';
 // import 'core-js/es6/weak-map';
 // import 'core-js/es6/set';
+// import 'web-animations-js';
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 /** IE10 and IE11 requires the following for the Reflect API. */

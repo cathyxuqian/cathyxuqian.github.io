@@ -104,21 +104,25 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_parallax___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ngx_parallax__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__ = __webpack_require__("../../../../ng-masonry-grid/ng-masonry-grid.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pipes_text_format_pipe__ = __webpack_require__("../../../../../src/app/pipes/text-format.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_background_url_pipe__ = __webpack_require__("../../../../../src/app/pipes/background-url.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pipes_join_style_pipe__ = __webpack_require__("../../../../../src/app/pipes/join-style.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_gallery__ = __webpack_require__("../../../../ngx-gallery/bundles/ngx-gallery.umd.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_gallery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ngx_gallery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_text_format_pipe__ = __webpack_require__("../../../../../src/app/pipes/text-format.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pipes_background_url_pipe__ = __webpack_require__("../../../../../src/app/pipes/background-url.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pipes_join_style_pipe__ = __webpack_require__("../../../../../src/app/pipes/join-style.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_gallery_page_gallery_page_component__ = __webpack_require__("../../../../../src/app/pages/gallery-page/gallery-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_project_card_project_card_component__ = __webpack_require__("../../../../../src/app/components/project-card/project-card.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -147,21 +151,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var appRoutes = [{
         path: '',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'home',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'works',
-        component: __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_17__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
     }, {
         path: 'works/:id',
-        component: __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
+    }, {
+        path: 'galleries/:id',
+        component: __WEBPACK_IMPORTED_MODULE_23__pages_gallery_page_gallery_page_component__["a" /* GalleryPageComponent */]
     }, {
         path: '**',
-        component: __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_20__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
     }];
 var AppModule = (function () {
     function AppModule() {
@@ -169,35 +179,38 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__pipes_text_format_pipe__["a" /* TextFormatPipe */],
-                __WEBPACK_IMPORTED_MODULE_10__pipes_background_url_pipe__["a" /* BackgroundUrlPipe */],
-                __WEBPACK_IMPORTED_MODULE_11__pipes_join_style_pipe__["a" /* JoinStylePipe */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_avatar_avatar_component__["a" /* AvatarComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_work_card_work_card_component__["a" /* WorkCardComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__pipes_text_format_pipe__["a" /* TextFormatPipe */],
+                __WEBPACK_IMPORTED_MODULE_11__pipes_background_url_pipe__["a" /* BackgroundUrlPipe */],
+                __WEBPACK_IMPORTED_MODULE_12__pipes_join_style_pipe__["a" /* JoinStylePipe */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_page_home_page_component__["a" /* HomePageComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_avatar_avatar_component__["a" /* AvatarComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_work_card_work_card_component__["a" /* WorkCardComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_gallery_page_gallery_page_component__["a" /* GalleryPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__components_project_card_project_card_component__["a" /* ProjectCardComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(appRoutes, {}),
                 __WEBPACK_IMPORTED_MODULE_4_ngx_carousel__["a" /* NgxCarouselModule */],
                 __WEBPACK_IMPORTED_MODULE_5_ngx_parallax__["ParallaxModule"],
                 __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__["NgMasonryGridModule"],
-                __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_material__["c" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_material__["b" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_material__["a" /* MatButtonModule */]
+                __WEBPACK_IMPORTED_MODULE_7_ngx_gallery__["NgxGalleryModule"],
+                __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_material__["c" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_material__["a" /* MatButtonModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_12__services_layout_service__["a" /* LayoutService */],
-                __WEBPACK_IMPORTED_MODULE_13__services_language_service__["a" /* LanguageService */]
+                __WEBPACK_IMPORTED_MODULE_13__services_layout_service__["a" /* LayoutService */],
+                __WEBPACK_IMPORTED_MODULE_14__services_language_service__["a" /* LanguageService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]
             ]
         })
     ], AppModule);
@@ -393,6 +406,93 @@ var NavigationComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/project-card/project-card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div [@cardAnimation]=\"state\" class=\"project-card\" [ngStyle]=\"page.style\">\n\t<div class=\"overlay\" [routerLink]=\"project.link\">\n\t\t<div class=\"name\">\n\t\t\t{{ project.name }}\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/project-card/project-card.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".project-card {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat; }\n  .project-card .overlay {\n    background-color: rgba(0, 0, 0, 0.4);\n    padding: 4em 1em;\n    cursor: pointer;\n    outline: none; }\n    .project-card .overlay .name {\n      font-size: 1.2em;\n      font-weight: 400;\n      text-align: center;\n      color: Snow;\n      height: 2.4em; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/project-card/project-card.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectCardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectCardComponent = (function () {
+    function ProjectCardComponent() {
+        this.state = "hide";
+        this.page = {
+            style: {}
+        };
+    }
+    ProjectCardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.page.style["background-image"] = "url(" + this.project.url + ")";
+        setTimeout(function () {
+            _this.state = "show";
+        }, 100);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], ProjectCardComponent.prototype, "project", void 0);
+    ProjectCardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-project-card',
+            template: __webpack_require__("../../../../../src/app/components/project-card/project-card.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/project-card/project-card.component.scss")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* trigger */])('cardAnimation', [
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('hide', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 0
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({
+                        opacity: 1
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('hide => show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('400ms ease'))
+                ]),
+            ]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProjectCardComponent);
+    return ProjectCardComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/work-card/work-card.component.html":
 /***/ (function(module, exports) {
 
@@ -518,6 +618,241 @@ var WorkCardComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_layout_service__["a" /* LayoutService */]])
     ], WorkCardComponent);
     return WorkCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/gallery-page/gallery-page.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"gallery\" [ngStyle]=\"page.style\">\n\t<ngx-gallery [options]=\"galleryOptions\" [images]=\"galleryImages\"></ngx-gallery>\n\t<div class=\"info\">\n\t\t{{ language.comming_desc }}\n\t\t<!-- <br>\n\t\t{{ language.comming_soon|textFormat:2 }}... -->\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/gallery-page/gallery-page.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".gallery {\n  padding: 1em;\n  text-align: center;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center; }\n  .gallery .image {\n    width: 200px; }\n  .gallery .info {\n    padding: 2em 1em;\n    text-align: center;\n    font-size: 1em;\n    color: Grey; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/gallery-page/gallery-page.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GalleryPageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var GalleryPageComponent = (function () {
+    function GalleryPageComponent(route, layoutService, languageService) {
+        this.route = route;
+        this.layoutService = layoutService;
+        this.languageService = languageService;
+        this.loadImages = function (id) {
+            console.log("gallery id", id);
+            var images = [];
+            switch (id) {
+                case "wuhan_ipsc":
+                    images = [{
+                            url: "/assets/commercial/wuhan_ipsc/image_01.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_02.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_03.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_04.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_05.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_06.jpg"
+                        }, {
+                            url: "/assets/commercial/wuhan_ipsc/image_07.jpg"
+                        }];
+                    break;
+                case "xian_cgzjts":
+                    images = [{
+                            url: "/assets/commercial/xian_cgzjts/image_01.jpg"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_02.jpg"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_03.jpg"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_04.jpg"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_05.jpg"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_06.jpg"
+                        }];
+                    break;
+                case "suzhou_mxgtd":
+                    images = [{
+                            url: "/assets/commercial/suzhou_mxgtd/image_01.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_02.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_03.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_04.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_05.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_06.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_07.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_08.jpg"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_09.jpg"
+                        }];
+                    break;
+                case "myanmar_ptd":
+                    images = [{
+                            url: "/assets/hotel/myanmar_ptd/image_01.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_02.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_03.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_04.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_05.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_06.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_07.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_08.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_09.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_10.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_11.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_12.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_13.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_14.jpg"
+                        }, {
+                            url: "/assets/hotel/myanmar_ptd/image_15.jpg"
+                        }];
+                    break;
+                case "singapore_rp":
+                    images = [{
+                            url: "/assets/residential/singapore_rp/image_01.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_02.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_03.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_04.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_05.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_06.jpg"
+                        }, {
+                            url: "/assets/residential/singapore_rp/image_07.jpg"
+                        }];
+                    break;
+            }
+            // this.masonry.items = images;
+            for (var o in images) {
+                this.galleryImages.push({
+                    small: images[o].url,
+                    medium: images[o].url,
+                    big: images[o].url
+                });
+            }
+        };
+        this.drawLayout = function () {
+            var _this = this;
+            this.layoutService.dimension(function (width, height) {
+                // console.log(width, height);
+                _this.page.style["min-height"] = height - 170 + "px";
+            });
+        };
+        this.language = this.languageService.loadLanguage();
+        this.galleryOptions = [{
+                "thumbnailsColumns": 4,
+                "thumbnailsRows": 1,
+                "thumbnailsPercent": 20,
+                "imagePercent": 60,
+                "thumbnailMargin": 2,
+                "thumbnailsMargin": 2,
+                "thumbnailsOrder": 2,
+                "width": "800px",
+                "height": "500px"
+            }, {
+                "breakpoint": 800,
+                "width": "500px",
+                "height": "400px",
+                "thumbnailsColumns": 3
+            }, {
+                "breakpoint": 500,
+                "width": "300px",
+                "height": "300px",
+                "thumbnailsColumns": 3
+            }, {
+                "breakpoint": 300,
+                "width": "100%",
+                "height": "200px",
+                "thumbnailsColumns": 2
+            }];
+        this.galleryImages = [];
+        this.page = {
+            style: {
+                "min-height": "initial"
+            }
+        };
+    }
+    GalleryPageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.drawLayout();
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.loadImages(params.id);
+        });
+    };
+    GalleryPageComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
+    GalleryPageComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-gallery-page',
+            template: __webpack_require__("../../../../../src/app/pages/gallery-page/gallery-page.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/gallery-page/gallery-page.component.scss")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__services_layout_service__["a" /* LayoutService */], __WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
+    ], GalleryPageComponent);
+    return GalleryPageComponent;
 }());
 
 
@@ -718,7 +1053,7 @@ var NotFoundPageComponent = (function () {
 /***/ "../../../../../src/app/pages/work-page/work-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"work-page\">\n\t<ng-masonry-grid [masonryOptions]=\"masonry.options\" [useAnimation]=\"masonry.useAnimation\" [useImagesLoaded]=\"masonry.useImagesLoaded\" [scrollAnimationOptions]=\"masonry.scrollAnimationOptions\">\n\t\t<ng-masonry-grid-item *ngFor=\"let item of masonry.items\">\n\t\t\t<img class=\"image\" [src]=\"item.url\" alt=\"No image\" />\n\t\t</ng-masonry-grid-item>\n\t</ng-masonry-grid>\n\t<div class=\"info\">\n\t\t{{ language.comming_desc }}\n\t\t<br>\n\t\t{{ language.comming_soon|textFormat:2 }}...\n\t</div>\n</div>"
+module.exports = "<div class=\"work-page\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\">\n\t<!-- <ng-masonry-grid [masonryOptions]=\"masonry.options\" [useAnimation]=\"masonry.useAnimation\" [useImagesLoaded]=\"masonry.useImagesLoaded\" [scrollAnimationOptions]=\"masonry.scrollAnimationOptions\">\n\t\t<ng-masonry-grid-item *ngFor=\"let item of masonry.items\">\n\t\t\t<img class=\"image\" [src]=\"item.url\" alt=\"No image\" />\n\t\t</ng-masonry-grid-item>\n\t</ng-masonry-grid> -->\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"220px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of projects\">\n\t\t\t<app-project-card class=\"project-card\" [project]=\"item\"></app-project-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n\t<div class=\"info\">\n\t\t{{ language.comming_desc }}\n\t\t<!-- <br>\n\t\t{{ language.comming_soon|textFormat:2 }}... -->\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -730,7 +1065,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-page {\n  padding: 1em; }\n  .work-page .image {\n    width: 200px; }\n  .work-page .info {\n    padding: 2em 1em;\n    text-align: center;\n    font-size: 2em;\n    color: Grey; }\n", ""]);
+exports.push([module.i, ".work-page {\n  padding: 1em;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  text-align: center; }\n  .work-page .project-card {\n    width: 100%;\n    padding: 1em; }\n  .work-page .image {\n    width: 200px; }\n  .work-page .info {\n    padding: 2em 1em;\n    text-align: center;\n    font-size: 1em;\n    color: Grey; }\n", ""]);
 
 // exports
 
@@ -748,6 +1083,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -760,62 +1096,98 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WorkPageComponent = (function () {
-    function WorkPageComponent(route, languageService) {
+    function WorkPageComponent(route, layoutService, languageService) {
         this.route = route;
+        this.layoutService = layoutService;
         this.languageService = languageService;
-        this.loadImages = function (id) {
-            console.log("work id", id);
-            this.masonry.items = [{
-                    url: "/assets/city_bg_01.png"
-                }, {
-                    url: "/assets/city_bg_02.jpg"
-                }, {
-                    url: "/assets/avatar.jpg"
-                }, {
-                    url: "/assets/icon.png"
-                }, {
-                    url: "/assets/interior_design_1.jpg"
-                }, {
-                    url: "/assets/interior_design_2.jpg"
-                }, {
-                    url: "/assets/interior_design_3.jpg"
-                }, {
-                    url: "/assets/interior_design_4.jpg"
-                }, {
-                    url: "/assets/plant_simple.png"
-                }, {
-                    url: "/assets/sketch_room.png"
-                }, {
-                    url: "/assets/work_commercial.jpg"
-                }, {
-                    url: "/assets/work_hotel.jpg"
-                }, {
-                    url: "/assets/work_office.jpg"
-                }, {
-                    url: "/assets/work_residential.jpg"
-                }];
+        this.drawLayout = function () {
+            var _this = this;
+            this.layoutService.dimension(function (width, height) {
+                // console.log(width, height);
+                if (width < 700) {
+                    _this.page.cols = 1;
+                    _this.page.colspan = 1;
+                }
+                else if (width < 900) {
+                    _this.page.cols = 2;
+                    _this.page.colspan = 1;
+                }
+                else if (width < 1049) {
+                    _this.page.cols = 3;
+                    _this.page.colspan = 1;
+                }
+                else {
+                    _this.page.cols = 4;
+                    _this.page.colspan = 1;
+                }
+                _this.page.style["min-height"] = height - 138 + "px";
+            });
         };
         this.language = this.languageService.loadLanguage();
-        this.masonry = {
-            items: [],
-            options: {
-                transitionDuration: '0.8s',
-                gutter: 5
-            },
-            useAnimation: true,
-            useImagesLoaded: true,
-            scrollAnimationOptions: {
-                animationEffect: 'effect-4',
-                minDuration: 0.4,
-                maxDuration: 0.7
+        // this.masonry = {
+        // 	items: [],
+        // 	options: {
+        // 		transitionDuration: '0.8s',
+        // 		gutter: 5
+        // 	},
+        // 	useAnimation: true,
+        // 	useImagesLoaded: true,
+        // 	scrollAnimationOptions: {
+        // 		animationEffect: 'effect-4',
+        // 		minDuration : 0.4,
+        // 		maxDuration : 0.7
+        // 	}
+        // };
+        this.projects = [];
+        this.page = {
+            cols: 4,
+            colspan: 1,
+            style: {
+                "min-height": "initial"
             }
         };
     }
     WorkPageComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.drawLayout();
         this.sub = this.route.params.subscribe(function (params) {
-            _this.loadImages(params.id);
+            console.log("work", params.id);
+            switch (params.id) {
+                case "commercial":
+                    _this.projects = [{
+                            url: "/assets/commercial/wuhan_ipsc/image_01.jpg",
+                            name: "Wuhan International Plaza Shopping Centre (China)",
+                            link: "/galleries/wuhan_ipsc"
+                        }, {
+                            url: "/assets/commercial/xian_cgzjts/image_01.jpg",
+                            name: "Xi’an Century Ginwa Zhu Jiang Time Square (China)",
+                            link: "/galleries/xian_cgzjts"
+                        }, {
+                            url: "/assets/commercial/suzhou_mxgtd/image_01.jpg",
+                            name: "Suzhou Matro Xin Gang Tian Du (China)",
+                            link: "/galleries/suzhou_mxgtd"
+                        }];
+                    break;
+                case "residential":
+                    _this.projects = [{
+                            url: "/assets/residential/singapore_rp/image_01.jpg",
+                            name: "Ridley Park (Singapore)",
+                            link: "/galleries/singapore_rp"
+                        }];
+                    break;
+                case "hotel":
+                    _this.projects = [{
+                            url: "/assets/hotel/myanmar_ptd/image_01.jpg",
+                            name: "Pray Towers Development (Myanmar)",
+                            link: "/galleries/myanmar_ptd"
+                        }];
+                    break;
+                case "office":
+                    _this.projects = [];
+                    break;
+            }
         });
     };
     WorkPageComponent.prototype.ngOnDestroy = function () {
@@ -827,7 +1199,7 @@ var WorkPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/work-page/work-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__services_layout_service__["a" /* LayoutService */], __WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
     ], WorkPageComponent);
     return WorkPageComponent;
 }());
@@ -839,7 +1211,7 @@ var WorkPageComponent = (function () {
 /***/ "../../../../../src/app/pages/works-page/works-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"works\" [ngStyle]=\"page.style\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links; index as i;\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\" [delay]=\"i*600\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
+module.exports = "<div class=\"works\" [ngStyle]=\"page.style\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links; index as i;\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\" [delay]=\"i*200\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
 
 /***/ }),
 
@@ -1107,7 +1479,7 @@ var Language = (function () {
         about_me: "about me",
         about_me_desc_1: "I am Cathy, an interior designer working and living in Singapore.",
         about_me_desc_2: "Passion for art and design drives me to go beyond limitations and I zoom in on minute details to ensure design perfection, striking precise balance on aesthetics and functionality of the overall design.",
-        about_me_desc_3: "Write a message, give me a call and I'll grab a coffee and talk about your project.",
+        about_me_desc_3: "Write a message, give me a call :)",
         my_works: "my works",
         email: "email",
         email_value: "cathyhsuqian@gmail.com",
@@ -1124,7 +1496,7 @@ var Language = (function () {
         hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
         office_desc: "Companies, Organizations, SMEs, Start Ups",
         comming_soon: "comming soon",
-        comming_desc: "This page is progressively updating."
+        comming_desc: "This page is progressively updating..."
     };
     Language.ch = {
         en: "en",
@@ -1145,7 +1517,7 @@ var Language = (function () {
         about_me: "关于我",
         about_me_desc_1: "我是许茜，一个在新加坡工作生活的室内设计师。",
         about_me_desc_2: "对艺术设计的热情使我不断的自我超越，并且出于我对时间的精准掌控确保了我的设计趋于完美，整体作品美学与功能并存。",
-        about_me_desc_3: "给我留言或者一通电话，我们可以坐下来聊聊您的项目。",
+        about_me_desc_3: "给我留言或者一通电话：）",
         my_works: "我的作品",
         email: "电邮",
         email_value: "cathyhsuqian@gmail.com",
@@ -1162,7 +1534,7 @@ var Language = (function () {
         hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
         office_desc: "Companies, Organizations, SMEs, Start Ups",
         comming_soon: "即将推出",
-        comming_desc: "此页面在逐步更新中。"
+        comming_desc: "此页面在逐步更新中。。。"
     };
     return Language;
 }());
