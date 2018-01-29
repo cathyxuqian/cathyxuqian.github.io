@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content\">\n\t<app-navigation></app-navigation>\n\t<router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div class=\"content\">\n\t<app-navigation></app-navigation>\n\t<router-outlet></router-outlet>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}:\n\t\t{{ language.developer_value }}\n\t\t<span class=\"language\" (click)=\"switchLanguage('EN')\" [ngClass]=\"{'active':lngstate=='EN'}\">\n\t\t\t{{ language.en|textFormat:3 }}\n\t\t</span>\n\t\t<span class=\"language\" (click)=\"switchLanguage('CH')\" [ngClass]=\"{'active':lngstate=='CH'}\">\n\t\t\t{{ language.ch|textFormat:3 }}\n\t\t</span>\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".content .developer {\n  background-color: Ivory;\n  color: Grey;\n  font-size: 0.6em;\n  padding: 1em;\n  text-align: center; }\n  .content .developer .language {\n    cursor: pointer; }\n    .content .developer .language.active {\n      text-decoration: underline; }\n", ""]);
 
 // exports
 
@@ -48,23 +48,39 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(languageService) {
+        this.languageService = languageService;
         this.title = 'app';
+        this.switchLanguage = function (state) {
+            if (this.lngstate != state) {
+                this.lngstate = state;
+                this.languageService.setLanguage(this.lngstate);
+                window.location.href = "";
+            }
+        };
+        this.language = this.languageService.loadLanguage();
+        this.lngstate = this.languageService.getLanguage();
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_language_service__["a" /* LanguageService */]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -82,31 +98,34 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hammerjs__ = __webpack_require__("../../../../hammerjs/hammer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_carousel__ = __webpack_require__("../../../../ngx-carousel/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_carousel__ = __webpack_require__("../../../../ngx-carousel/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_parallax__ = __webpack_require__("../../../../ngx-parallax/dist/bundle.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_parallax___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ngx_parallax__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pipes_text_format_pipe__ = __webpack_require__("../../../../../src/app/pipes/text-format.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pipes_background_url_pipe__ = __webpack_require__("../../../../../src/app/pipes/background-url.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_join_style_pipe__ = __webpack_require__("../../../../../src/app/pipes/join-style.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__ = __webpack_require__("../../../../ng-masonry-grid/ng-masonry-grid.umd.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pipes_text_format_pipe__ = __webpack_require__("../../../../../src/app/pipes/text-format.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_background_url_pipe__ = __webpack_require__("../../../../../src/app/pipes/background-url.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pipes_join_style_pipe__ = __webpack_require__("../../../../../src/app/pipes/join-style.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_layout_service__ = __webpack_require__("../../../../../src/app/services/layout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__ = __webpack_require__("../../../../../src/app/pages/home-page/home-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__ = __webpack_require__("../../../../../src/app/pages/works-page/works-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__ = __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__ = __webpack_require__("../../../../../src/app/pages/not-found-page/not-found-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_avatar_avatar_component__ = __webpack_require__("../../../../../src/app/components/avatar/avatar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_work_card_work_card_component__ = __webpack_require__("../../../../../src/app/components/work-card/work-card.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -130,19 +149,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var appRoutes = [{
         path: '',
-        component: __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'home',
-        component: __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */]
     }, {
         path: 'works',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__["a" /* WorksPageComponent */]
     }, {
         path: 'works/:id',
-        component: __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__["a" /* WorkPageComponent */]
     }, {
         path: '**',
-        component: __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */]
     }];
 var AppModule = (function () {
     function AppModule() {
@@ -150,34 +169,35 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__pipes_text_format_pipe__["a" /* TextFormatPipe */],
-                __WEBPACK_IMPORTED_MODULE_9__pipes_background_url_pipe__["a" /* BackgroundUrlPipe */],
-                __WEBPACK_IMPORTED_MODULE_10__pipes_join_style_pipe__["a" /* JoinStylePipe */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_home_page_home_page_component__["a" /* HomePageComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__components_navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_avatar_avatar_component__["a" /* AvatarComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_work_card_work_card_component__["a" /* WorkCardComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__pipes_text_format_pipe__["a" /* TextFormatPipe */],
+                __WEBPACK_IMPORTED_MODULE_10__pipes_background_url_pipe__["a" /* BackgroundUrlPipe */],
+                __WEBPACK_IMPORTED_MODULE_11__pipes_join_style_pipe__["a" /* JoinStylePipe */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_home_page_home_page_component__["a" /* HomePageComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_works_page_works_page_component__["a" /* WorksPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_work_page_work_page_component__["a" /* WorkPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_avatar_avatar_component__["a" /* AvatarComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_work_card_work_card_component__["a" /* WorkCardComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_3_ngx_carousel__["a" /* NgxCarouselModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes, {}),
+                __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(appRoutes, {}),
+                __WEBPACK_IMPORTED_MODULE_4_ngx_carousel__["a" /* NgxCarouselModule */],
                 __WEBPACK_IMPORTED_MODULE_5_ngx_parallax__["ParallaxModule"],
-                __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular_material__["c" /* MatGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular_material__["b" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_7__angular_material__["a" /* MatButtonModule */]
+                __WEBPACK_IMPORTED_MODULE_6_ng_masonry_grid__["NgMasonryGridModule"],
+                __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_material__["c" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_material__["a" /* MatButtonModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_11__services_layout_service__["a" /* LayoutService */],
-                __WEBPACK_IMPORTED_MODULE_12__services_language_service__["a" /* LanguageService */]
+                __WEBPACK_IMPORTED_MODULE_12__services_layout_service__["a" /* LayoutService */],
+                __WEBPACK_IMPORTED_MODULE_13__services_language_service__["a" /* LanguageService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]
             ]
         })
     ], AppModule);
@@ -376,7 +396,7 @@ var NavigationComponent = (function () {
 /***/ "../../../../../src/app/components/work-card/work-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [@cardAnimation]=\"state\" class=\"work-card\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\" (mouseenter)=\"zoom('out')\" (mouseleave)=\"zoom('in')\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div>\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
+module.exports = "<div [@cardAnimation]=\"state\" class=\"work-card\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\" (mouseenter)=\"zoom('out')\" (mouseleave)=\"zoom('in')\">\n\t<mat-card class=\"card\">\n\t\t<mat-card-content>\n\t\t\t<!-- <div class=\"content\">\n\t\t\t\t{{ link.description }}\n\t\t\t</div> -->\n\t\t</mat-card-content>\n\t\t<mat-card-actions class=\"actions\">\n\t\t\t<button class=\"button\" mat-button [routerLink]=\"['/works/', link.url]\">\n\t\t\t\t{{ link.name|textFormat:3 }}\n\t\t\t</button>\n\t\t</mat-card-actions>\n\t</mat-card>\n</div>"
 
 /***/ }),
 
@@ -388,7 +408,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow;\n    height: 160px; }\n    .work-card .card .content {\n      text-align: center;\n      padding: 2em 0 0.4em 0;\n      font-size: 1.4em;\n      height: 1em; }\n    .work-card .card .actions {\n      text-align: center; }\n", ""]);
+exports.push([module.i, ".work-card {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n  .work-card .card {\n    background-color: rgba(0, 0, 0, 0.4);\n    color: Snow;\n    height: 160px; }\n    .work-card .card .content {\n      text-align: center;\n      padding: 2em 0 0.4em 0;\n      font-size: 1.4em;\n      height: 1em; }\n    .work-card .card .actions {\n      text-align: center; }\n      .work-card .card .actions .button {\n        font-size: 2em;\n        padding: 1em; }\n", ""]);
 
 // exports
 
@@ -507,7 +527,7 @@ var WorkCardComponent = (function () {
 /***/ "../../../../../src/app/pages/home-page/home-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home\">\n\t<ngx-carousel [@aboutAnimation]=\"state\" class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div [@aboutAnimation]=\"state\" class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t\t<div class=\"works\">\n\t\t\t<button mat-raised-button [routerLink]=\"['/works']\">\n\t\t\t\t{{ language.my_works|textFormat:2 }}\n\t\t\t</button>\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n\t<div class=\"developer\">\n\t\t{{ language.developer|textFormat:1 }}: {{ language.developer_value }}\n\t</div>\n</div>\n"
+module.exports = "<div class=\"home\">\n\t<ngx-carousel [@aboutAnimation]=\"state\" class=\"carousel\" [inputs]=\"carousel\" (carouselLoad)=\"carouselChange($event)\">\n\t\t<ngx-item *ngFor=\"let item of banners\" NgxCarouselItem>\n\t\t\t<div class=\"banner\" [ngStyle]=\"item.link|backgroundUrl\">\n\t\t\t\t<div class=\"overlay\">\n\t\t\t\t\t<div class=\"title\">\n\t\t\t\t\t\t{{ item.title|textFormat:2 }}\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"description\">\n\t\t\t\t\t\t{{ item.description }}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</ngx-item>\n\t\t<div NgxCarouselPrev class=\"left-btn\">&lt;</div>\n\t\t<div NgxCarouselNext class=\"right-btn\">&gt;</div>\n\t</ngx-carousel>\n\t<div [@aboutAnimation]=\"state\" class=\"about\" parallax [config]=\"parallax.config\">\n\t\t<div class=\"title\">\n\t\t\t{{ language.about_me|textFormat:2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_1 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_2 }}\n\t\t</div>\n\t\t<div class=\"description\">\n\t\t\t{{ language.about_me_desc_3 }}\n\t\t</div>\n\t\t<div class=\"works\">\n\t\t\t<button mat-raised-button [routerLink]=\"['/works']\">\n\t\t\t\t{{ language.my_works|textFormat:2 }}\n\t\t\t</button>\n\t\t</div>\n\t</div>\n\t<div class=\"contact\">\n\t\t<div class=\"info\">\n\t\t\t{{ language.email|textFormat:1 }}: {{ language.email_value }}\n\t\t</div>\n\t\t<div class=\"info\">\n\t\t\t{{ language.phone|textFormat:1 }}: {{ language.phone_value }}\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -519,7 +539,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".home .carousel {\n  margin-bottom: 1em; }\n  .home .carousel .banner {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center; }\n    .home .carousel .banner .overlay {\n      background-color: rgba(3, 3, 3, 0.4);\n      padding: 5em 0; }\n      .home .carousel .banner .overlay .title {\n        color: Snow;\n        font-size: 2em;\n        text-align: center;\n        margin-bottom: 1em; }\n      .home .carousel .banner .overlay .description {\n        color: Snow;\n        font-size: 1em;\n        text-align: center;\n        height: 1.2em; }\n  .home .carousel .left-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    left: 0;\n    cursor: pointer;\n    color: Snow; }\n  .home .carousel .right-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    right: 0;\n    cursor: pointer;\n    color: Snow; }\n\n.home .about {\n  background-repeat: no-repeat;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-position: center;\n  padding: 4em 0 6em 0; }\n  .home .about .title {\n    color: Grey;\n    text-align: center;\n    font-size: 2em;\n    margin-bottom: 1em; }\n  .home .about .description {\n    color: DimGrey;\n    text-align: center;\n    max-width: 600px;\n    margin: 0 auto;\n    padding: 0.8em; }\n    .home .about .description.strong {\n      font-weight: bold; }\n  .home .about .works {\n    margin: 1em 0;\n    text-align: center;\n    color: DimGrey; }\n\n.home .contact {\n  background-color: SlateGrey;\n  padding: 2em 0;\n  color: Snow;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .home .contact .info {\n    padding: 0.4em 1em;\n    border-right: solid 1px LightGrey; }\n    .home .contact .info:first-child {\n      margin-left: auto; }\n    .home .contact .info:last-child {\n      margin-right: auto;\n      border-right: none; }\n\n.home .developer {\n  background-color: Ivory;\n  color: Grey;\n  font-size: 0.6em;\n  padding: 1em;\n  text-align: center; }\n", ""]);
+exports.push([module.i, ".home .carousel {\n  margin-bottom: 1em; }\n  .home .carousel .banner {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center; }\n    .home .carousel .banner .overlay {\n      background-color: rgba(3, 3, 3, 0.4);\n      padding: 5em 0; }\n      .home .carousel .banner .overlay .title {\n        color: Snow;\n        font-size: 2em;\n        text-align: center;\n        margin-bottom: 1em; }\n      .home .carousel .banner .overlay .description {\n        color: Snow;\n        font-size: 1em;\n        text-align: center;\n        height: 1.2em; }\n  .home .carousel .left-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    left: 0;\n    cursor: pointer;\n    color: Snow; }\n  .home .carousel .right-btn {\n    position: absolute;\n    padding: 1em;\n    top: 33.333333333%;\n    right: 0;\n    cursor: pointer;\n    color: Snow; }\n\n.home .about {\n  background-repeat: no-repeat;\n  background-image: url(\"/assets/city_bg_02.jpg\");\n  background-position: center;\n  padding: 4em 0 6em 0; }\n  .home .about .title {\n    color: Grey;\n    text-align: center;\n    font-size: 2em;\n    margin-bottom: 1em; }\n  .home .about .description {\n    color: DimGrey;\n    text-align: center;\n    max-width: 600px;\n    margin: 0 auto;\n    padding: 0.8em; }\n    .home .about .description.strong {\n      font-weight: bold; }\n  .home .about .works {\n    margin: 1em 0;\n    text-align: center;\n    color: DimGrey; }\n\n.home .contact {\n  background-color: SlateGrey;\n  padding: 2em 0;\n  color: Snow;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .home .contact .info {\n    padding: 0.4em 1em;\n    border-right: solid 1px LightGrey; }\n    .home .contact .info:first-child {\n      margin-left: auto; }\n    .home .contact .info:last-child {\n      margin-right: auto;\n      border-right: none; }\n", ""]);
 
 // exports
 
@@ -698,7 +718,7 @@ var NotFoundPageComponent = (function () {
 /***/ "../../../../../src/app/pages/work-page/work-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"work-page\">\n\t<div class=\"info\">\n\t\tThis page is progressively updating.<br>\n\t\tCommint Soon...\n\t</div>\n</div>"
+module.exports = "<div class=\"work-page\">\n\t<ng-masonry-grid [masonryOptions]=\"masonry.options\" [useAnimation]=\"masonry.useAnimation\" [useImagesLoaded]=\"masonry.useImagesLoaded\" [scrollAnimationOptions]=\"masonry.scrollAnimationOptions\">\n\t\t<ng-masonry-grid-item *ngFor=\"let item of masonry.items\">\n\t\t\t<img class=\"image\" [src]=\"item.url\" alt=\"No image\" />\n\t\t</ng-masonry-grid-item>\n\t</ng-masonry-grid>\n\t<div class=\"info\">\n\t\t{{ language.comming_desc }}\n\t\t<br>\n\t\t{{ language.comming_soon|textFormat:2 }}...\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -710,7 +730,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-page .info {\n  padding: 2em 1em;\n  text-align: center;\n  font-size: 2em;\n  color: Grey; }\n", ""]);
+exports.push([module.i, ".work-page {\n  padding: 1em; }\n  .work-page .image {\n    width: 200px; }\n  .work-page .info {\n    padding: 2em 1em;\n    text-align: center;\n    font-size: 2em;\n    color: Grey; }\n", ""]);
 
 // exports
 
@@ -727,6 +747,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_language_service__ = __webpack_require__("../../../../../src/app/services/language.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -738,14 +759,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var WorkPageComponent = (function () {
-    function WorkPageComponent(route) {
+    function WorkPageComponent(route, languageService) {
         this.route = route;
+        this.languageService = languageService;
+        this.loadImages = function (id) {
+            console.log("work id", id);
+            this.masonry.items = [{
+                    url: "/assets/city_bg_01.png"
+                }, {
+                    url: "/assets/city_bg_02.jpg"
+                }, {
+                    url: "/assets/avatar.jpg"
+                }, {
+                    url: "/assets/icon.png"
+                }, {
+                    url: "/assets/interior_design_1.jpg"
+                }, {
+                    url: "/assets/interior_design_2.jpg"
+                }, {
+                    url: "/assets/interior_design_3.jpg"
+                }, {
+                    url: "/assets/interior_design_4.jpg"
+                }, {
+                    url: "/assets/plant_simple.png"
+                }, {
+                    url: "/assets/sketch_room.png"
+                }, {
+                    url: "/assets/work_commercial.jpg"
+                }, {
+                    url: "/assets/work_hotel.jpg"
+                }, {
+                    url: "/assets/work_office.jpg"
+                }, {
+                    url: "/assets/work_residential.jpg"
+                }];
+        };
+        this.language = this.languageService.loadLanguage();
+        this.masonry = {
+            items: [],
+            options: {
+                transitionDuration: '0.8s',
+                gutter: 5
+            },
+            useAnimation: true,
+            useImagesLoaded: true,
+            scrollAnimationOptions: {
+                animationEffect: 'effect-4',
+                minDuration: 0.4,
+                maxDuration: 0.7
+            }
+        };
     }
     WorkPageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
-            _this.title = params.id;
+            _this.loadImages(params.id);
         });
     };
     WorkPageComponent.prototype.ngOnDestroy = function () {
@@ -757,7 +827,7 @@ var WorkPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/work-page/work-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/work-page/work-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_2__services_language_service__["a" /* LanguageService */]])
     ], WorkPageComponent);
     return WorkPageComponent;
 }());
@@ -1019,6 +1089,8 @@ var Language = (function () {
     function Language() {
     }
     Language.en = {
+        en: "en",
+        ch: "ch",
         cathy: "cathy",
         home: "home",
         works: "works",
@@ -1033,7 +1105,7 @@ var Language = (function () {
         all_for_you: "all for you",
         all_for_you_desc: "Everything I have done is provide you a fantastic interior experience",
         about_me: "about me",
-        about_me_desc_1: "I am Cathy, a freelance interior designer working and living in Singapore.",
+        about_me_desc_1: "I am Cathy, an interior designer working and living in Singapore.",
         about_me_desc_2: "Passion for art and design drives me to go beyond limitations and I zoom in on minute details to ensure design perfection, striking precise balance on aesthetics and functionality of the overall design.",
         about_me_desc_3: "Write a message, give me a call and I'll grab a coffee and talk about your project.",
         my_works: "my works",
@@ -1050,41 +1122,47 @@ var Language = (function () {
         commercial_desc: "Shopping centers, Restaurants, Cafés, Bars",
         residential_desc: "HDB Units, Terrace House, EC, Condominiums",
         hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
-        office_desc: "Companies, Organizations, SMEs, Start Ups"
+        office_desc: "Companies, Organizations, SMEs, Start Ups",
+        comming_soon: "comming soon",
+        comming_desc: "This page is progressively updating."
     };
     Language.ch = {
-        cathy: "cathy",
-        home: "home",
-        works: "works",
-        err_404: "404 Error",
-        desc_page_not_round: "Sorry! The page you are looking for is not exist!",
-        morden_concept: "morden concept",
-        morden_concept_desc: "I do design with all advanced and latest techniques",
-        flexible_time: "flexible time",
-        flexible_time_desc: "You are the time manager for your building",
-        cost_effecient: "cost effecient",
-        cost_effecient_desc: "Materials designs and works are transparent for you",
-        all_for_you: "all for you",
-        all_for_you_desc: "Everything I have done is provide you a fantastic interior experience",
-        about_me: "about me",
-        about_me_desc_1: "I am Cathy, a freelance interior designer working and living in Singapore.",
-        about_me_desc_2: "Passion for art and design drives me to go beyond limitations and I zoom in on minute details to ensure design perfection, striking precise balance on aesthetics and functionality of the overall design.",
-        about_me_desc_3: "Write a message, give me a call and I'll grab a coffee and talk about your project.",
-        my_works: "my works",
-        email: "email",
+        en: "英文",
+        ch: "中文",
+        cathy: "许茜",
+        home: "主页",
+        works: "作品",
+        err_404: "404 报错",
+        desc_page_not_round: "对不起！您寻找的页面不存在！",
+        morden_concept: "现代化概念",
+        morden_concept_desc: "我提供最先进和最新的设计技术方案",
+        flexible_time: "灵活的时间",
+        flexible_time_desc: "您的装修项目进程您做主",
+        cost_effecient: "合算的报价",
+        cost_effecient_desc: "设计 材料 人工费用对您完全透明",
+        all_for_you: "全部为了您",
+        all_for_you_desc: "我致力于给您带来前所未有的装修体验",
+        about_me: "关于我",
+        about_me_desc_1: "我是许茜，一个在新加坡工作生活的室内设计师。",
+        about_me_desc_2: "对艺术设计的热情使我不断的自我超越，并且出于我对时间的精准掌控确保了我的设计趋于完美，整体作品美学与功能并存。",
+        about_me_desc_3: "给我留言或者一通电话，我们可以坐下来聊聊您的项目。",
+        my_works: "我的作品",
+        email: "电邮",
         email_value: "cathyhsuqian@gmail.com",
-        phone: "phone",
+        phone: "电话",
         phone_value: "+65 9822 5777",
-        developer: "developer",
+        developer: "开发者",
         developer_value: "YQ.B - 2018 Jan",
-        commercial: "commercial",
-        residential: "residential",
-        hotel: "hotel",
-        office: "office",
+        commercial: "商业",
+        residential: "住宅",
+        hotel: "酒店",
+        office: "办公室",
         commercial_desc: "Shopping centers, Restaurants, Cafés, Bars",
         residential_desc: "HDB Units, Terrace House, EC, Condominiums",
         hotel_desc: "Hotel Halls, Ballrooms, Premium Rooms, Gyms",
-        office_desc: "Companies, Organizations, SMEs, Start Ups"
+        office_desc: "Companies, Organizations, SMEs, Start Ups",
+        comming_soon: "即将推出",
+        comming_desc: "此页面在逐步更新中。"
     };
     return Language;
 }());
@@ -1125,6 +1203,16 @@ var LanguageService = (function () {
             else if (lan == "CH") {
                 return __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].ch;
             }
+        };
+        this.getLanguage = function () {
+            var lan = localStorage.getItem("CATHY_LANGUAGE");
+            if (!lan) {
+                lan = "EN";
+            }
+            return lan;
+        };
+        this.setLanguage = function (state) {
+            localStorage.setItem("CATHY_LANGUAGE", state);
         };
         this.language = __WEBPACK_IMPORTED_MODULE_1__resources_language__["a" /* Language */].en;
     }
