@@ -783,6 +783,71 @@ var GalleryPageComponent = (function () {
                             url: "/assets/residential/singapore_rp/image_07.jpg"
                         }];
                     break;
+                case "singapore_ec":
+                    images = [{
+                            url: "/assets/office/singapore_ec/image_01.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ec/image_02.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ec/image_03.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ec/image_04.jpg"
+                        }];
+                    break;
+                case "singapore_gr":
+                    images = [{
+                            url: "/assets/office/singapore_gr/image_01.jpg"
+                        }, {
+                            url: "/assets/office/singapore_gr/image_02.jpg"
+                        }, {
+                            url: "/assets/office/singapore_gr/image_03.jpg"
+                        }, {
+                            url: "/assets/office/singapore_gr/image_04.jpg"
+                        }];
+                    break;
+                case "singapore_hbo":
+                    images = [{
+                            url: "/assets/office/singapore_hbo/image_01.jpg"
+                        }, {
+                            url: "/assets/office/singapore_hbo/image_02.jpg"
+                        }];
+                    break;
+                case "singapore_ifs":
+                    images = [{
+                            url: "/assets/office/singapore_ifs/image_01.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_02.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_03.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_04.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_05.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_06.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_07.jpg"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_08.jpg"
+                        }];
+                    break;
+                case "singapore_kd":
+                    images = [{
+                            url: "/assets/office/singapore_kd/image_01.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_02.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_03.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_04.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_05.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_06.jpg"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_07.jpg"
+                        }];
+                    break;
             }
             // this.masonry.items = images;
             for (var o in images) {
@@ -1185,7 +1250,27 @@ var WorkPageComponent = (function () {
                         }];
                     break;
                 case "office":
-                    _this.projects = [];
+                    _this.projects = [{
+                            url: "/assets/office/singapore_ec/image_01.jpg",
+                            name: "Everest Capital (Singapore)",
+                            link: "/galleries/singapore_ec"
+                        }, {
+                            url: "/assets/office/singapore_gr/image_01.jpg",
+                            name: "Goodrich (Singapore)",
+                            link: "/galleries/singapore_gr"
+                        }, {
+                            url: "/assets/office/singapore_hbo/image_01.jpg",
+                            name: "HBO (Singapore)",
+                            link: "/galleries/singapore_hbo"
+                        }, {
+                            url: "/assets/office/singapore_ifs/image_01.jpg",
+                            name: "I-Flex Solutions (Singapore)",
+                            link: "/galleries/singapore_ifs"
+                        }, {
+                            url: "/assets/office/singapore_kd/image_01.jpg",
+                            name: "Kodak (Singapore)",
+                            link: "/galleries/singapore_kd"
+                        }];
                     break;
             }
         });
@@ -1211,7 +1296,7 @@ var WorkPageComponent = (function () {
 /***/ "../../../../../src/app/pages/works-page/works-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"works\" [ngStyle]=\"page.style\" parallax [config]=\"parallax.config\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links; index as i;\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\" [delay]=\"i*200\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
+module.exports = "<div class=\"works\" [ngStyle]=\"page.style\" (window:resize)=\"drawLayout()\">\n\t<mat-grid-list [cols]=\"page.cols\" rowHeight=\"240px\">\n\t\t<mat-grid-tile [colspan]=\"page.colspan\" *ngFor=\"let item of links; index as i;\">\n\t\t\t<app-work-card class=\"work-card\" [link]=\"item\" [delay]=\"i*200\"></app-work-card>\n\t\t</mat-grid-tile>\n\t</mat-grid-list>\n</div>\n"
 
 /***/ }),
 
